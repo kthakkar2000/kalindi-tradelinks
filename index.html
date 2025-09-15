@@ -1,44 +1,273 @@
 <!DOCTYPE html>
 <html lang="gu">
 <head>
-  <meta charset="UTF-8">
-  <title>સેમસંગ સ્માર્ટ ટીવી - કલિંદી ટ્રેડલિંક્સ</title>
+  <meta charset="utf-8" />
+  <title>સેમસંગ સ્માર્ટ ટીવી - Kalindi Tradelinks</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
     body {
       font-family: "Noto Sans Gujarati", Arial, sans-serif;
       background: #f4f6f9;
       margin: 0;
-      padding: 20px;
+      padding: 22px;
       text-align: center;
+      color: #222;
     }
-    h2 { color: #2c3e50; font-size: 28px; margin-bottom: 10px; }
-    h3 { color: #16a085; font-size: 22px; margin-bottom: 20px; }
-    img { width: 350px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-    p { font-size: 18px; color: #333; margin: 20px auto; width: 75%; line-height: 1.6; }
-    footer { margin-top: 40px; font-size: 14px; color: #555; }
+    .card {
+      max-width: 760px;
+      margin: 14px auto;
+      background: #fff;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    h1 { margin: 0 0 6px 0; font-size: 20px; color: #163a2b; }
+    h2 { margin: 6px 0 14px 0; color:#16a085; font-size:18px; }
+    img { width: 360px; border-radius:10px; box-shadow:0 6px 16px rgba(0,0,0,0.12); }
+    p { color:#333; line-height:1.6; font-size:16px; margin: 16px auto; max-width:640px; }
+    footer { font-size:13px; color:#666; margin-top:10px; }
+    /* invisible helper (used only for debugging if needed) */
+    #autoplay-hint { position:fixed; left:8px; bottom:8px; font-size:12px; color:#999; opacity:0.0; }
   </style>
 </head>
 <body>
-  <h2>કલિંદી ટ્રેડલિંક્સ પ્રા. લિ.</h2>
-  <h3>તમે જોઈ રહ્યા છો: સેમસંગ ૫૫" સ્માર્ટ ટીવી</h3>
+  <div class="card">
+    <h1>Kalindi Tradelinks Pvt. Ltd.</h1>
+    <h2>તમારા માટે: સેમસંગ ૫૫" સ્માર્ટ ટીવી</h2>
 
-  <img src="KALINDI WEBSITE/IMAGES/A.JPEG.jpg" alt="સેમસંગ ટીવી">
+    <img src="KALINDI WEBSITE/IMAGES/A.JPEG.jpg" alt="Samsung TV" />
 
-  <p id="desc">
-    આ છે ૫૫ ઇંચનું 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી. તેમાં HDR સપોર્ટ, ડૉલ્બી સાઉન્ડ,
-    અને Netflix, YouTube જેવી બિલ્ટ-ઇન એપ્લિકેશન્સ છે. આધુનિક ડિઝાઇન અને ઉચ્ચ ગુણવત્તાની
-    પિક્ચર સાથે, તમારો મનોરંજન અનુભવ ઉત્તમ બનાવે છે.
-  </p>
+    <p id="desc">
+      આ છે ૫૫ ઇંચનું 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી. તેમાં HDR સપોર્ટ, ડૉલ્બી સાઉન્ડ,
+      અને Netflix, YouTube જેવી બિલ્ટ-ઇન એપ્લિકેશન્સ છે. આધુનિક ડિઝાઇન અને ઉચ્ચ ગુણવત્તાની
+      પિક્ચર સાથે, તમારો મનોરંજન અનુભવ ઉત્તમ બનાવે છે.
+    </p>
 
-  <footer>© 2025 કલિંદી ટ્રેડલિંક્સ પ્રા. લિ.</footer>
+    <footer>© 2025 Kalindi Tradelinks Pvt. Ltd.</footer>
+  </div>
+
+  <!-- tiny invisible debug text (opacity 0) to help in diagnosing if needed -->
+  <div id="autoplay-hint">autoplay status: check console</div>
 
   <script>
-    window.onload = function() {
-      let text = "કલિંદી ટ્રેડલિંક્સ પ્રાઇવેટ લિમિટેડમાં આપનું સ્વાગત છે. તમે સેમસંગ ૫૫ ઇંચ સ્માર્ટ ટીવી જોઈ રહ્યા છો. આ 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી HDR સપોર્ટ, ડૉલ્બી સાઉન્ડ અને Netflix, YouTube જેવી એપ્લિકેશન્સ સાથે આવે છે.";
-      let msg = new SpeechSynthesisUtterance(text);
-      msg.lang = "gu-IN";  // Gujarati voice
-      window.speechSynthesis.speak(msg);
+  (function(){
+    const TEXT = "કલિંદી ટ્રેડલિંક્સ પ્રાઇવેટ લિમિટેડમાં આપનું સ્વાગત છે. તમે સેમસંગ પંચા પાંજ પાચ પાચ પાચ ઇંચ સ્માર્ટ ટીવી જોઈ રહ્યા છો. આ 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી HDR સપોર્ટ, ડોલ્બી સાઉન્ડ અને Netflix, YouTube જેવી એપ્લિકેશન્સ સાથે આવે છે.";
+    // Note: above line repeats '૫૫' as words sometimes fail on some voices; if you prefer, replace with "૫૫" glyphs.
+
+    let spoken = false;
+    let triedSynthesis = false;
+    let triedGoogleTTS = false;
+    let audioCtx = null;
+
+    function log(...args){ console.log("[auto-tts]", ...args); }
+
+    // Try to pick a Gujarati voice if available
+    function chooseGujaratiVoice() {
+      const voices = window.speechSynthesis.getVoices() || [];
+      if (!voices.length) return null;
+      // prefer exact gu or gu-IN
+      let v = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('gu'));
+      if (v) return v;
+      // fallback: any voice containing 'Gujarati' in name
+      v = voices.find(v => v.name && /Gujarati/i.test(v.name));
+      if (v) return v;
+      return null;
+    }
+
+    function speakViaSpeechSynthesis(text, onFinish) {
+      if (spoken) return Promise.resolve(false);
+      if (!('speechSynthesis' in window)) {
+        log("No speechSynthesis support");
+        return Promise.resolve(false);
+      }
+      return new Promise((resolve) => {
+        try {
+          // if voices not loaded yet, wait briefly
+          let voices = window.speechSynthesis.getVoices();
+          if (!voices.length) {
+            // set handler to try again when voices load
+            window.speechSynthesis.onvoiceschanged = () => {
+              if (spoken) { resolve(false); return; }
+              _doSpeak();
+            };
+            // also try a small timeout fallback
+            setTimeout(()=>{ if(!spoken) _doSpeak(); }, 700);
+          } else {
+            _doSpeak();
+          }
+
+          function _doSpeak(){
+            if (spoken) { resolve(false); return; }
+            const utter = new SpeechSynthesisUtterance(text);
+            utter.lang = "gu-IN";
+            const v = chooseGujaratiVoice();
+            if (v) {
+              utter.voice = v;
+              log("Using voice:", v.name, v.lang);
+            } else {
+              log("No Gujarati voice available — will attempt default voice (may sound wrong)");
+            }
+            utter.rate = 1;
+            utter.pitch = 1;
+            utter.onend = function(){
+              spoken = true;
+              log("speechSynthesis finished");
+              if (typeof onFinish === 'function') onFinish();
+              resolve(true);
+            };
+            utter.onerror = function(e){
+              log("speechSynthesis error", e);
+              resolve(false);
+            };
+            triedSynthesis = true;
+            // try to speak (may be blocked)
+            try {
+              window.speechSynthesis.speak(utter);
+              log("speechSynthesis.speak() called");
+            } catch(err){
+              log("speechSynthesis.speak() threw:", err);
+              resolve(false);
+            }
+          }
+        } catch(err){
+          log("synthesis failure:", err);
+          resolve(false);
+        }
+      });
+    }
+
+    // Attempt to unlock AudioContext by playing a tiny silent buffer
+    function tryUnlockAudioContext() {
+      try {
+        window.AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!window.AudioContext) { log("No AudioContext available"); return null; }
+        audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended' && typeof audioCtx.resume === 'function') {
+          // Try resume
+          audioCtx.resume().then(()=> log("AudioContext resumed")).catch(()=> log("AudioContext resume blocked"));
+        }
+        // create a tiny silent buffer and play it
+        const buffer = audioCtx.createBuffer(1, 1, 22050);
+        const src = audioCtx.createBufferSource();
+        src.buffer = buffer;
+        src.connect(audioCtx.destination);
+        try { src.start(0); log("silent buffer started"); }
+        catch(e){ log("silent buffer start error", e); }
+        setTimeout(()=>{ try{ src.disconnect(); } catch(e){} }, 250);
+        return audioCtx;
+      } catch(e) {
+        log("AudioContext unlock failed:", e);
+        return null;
+      }
+    }
+
+    // Fallback: use Google Translate TTS audio playback
+    function playGoogleTTS(text, onFinish) {
+      if (spoken) return Promise.resolve(false);
+      if (triedGoogleTTS) return Promise.resolve(false);
+      triedGoogleTTS = true;
+      return new Promise((resolve) => {
+        try {
+          // Note: cross-origin restrictions may apply in some setups.
+          const url = "https://translate.google.com/translate_tts?ie=UTF-8&tl=gu&client=tw-ob&q=" + encodeURIComponent(text);
+          const audio = new Audio();
+          audio.crossOrigin = "anonymous";
+          audio.preload = "auto";
+          audio.src = url;
+          audio.volume = 1.0;
+          audio.onended = function(){ spoken = true; log("Google TTS finished"); if (onFinish) onFinish(); resolve(true); };
+          audio.onerror = function(e){ log("Google TTS error", e); resolve(false); };
+          // try to play (may be blocked)
+          const playPromise = audio.play();
+          if (playPromise && playPromise.catch) {
+            playPromise.then(()=> log("Google TTS play started")).catch(err => {
+              log("Google TTS play blocked:", err);
+              resolve(false);
+            });
+          } else {
+            log("Google TTS play triggered (no promise)");
+          }
+        } catch(e) {
+          log("playGoogleTTS exception", e);
+          resolve(false);
+        }
+      });
+    }
+
+    // Master attempt with staged fallbacks
+    async function attemptAutoPlayOnce() {
+      if (spoken) return;
+      log("Attempting auto-play sequence...");
+      // 1) Try to unlock audio system
+      tryUnlockAudioContext();
+
+      // 2) Try speechSynthesis first
+      let ok = await speakViaSpeechSynthesis(TEXT, ()=>{ /* finished */ });
+      if (ok) { log("Spoke via speechSynthesis"); return; }
+
+      // 3) If speechSynthesis failed or blocked, try Google TTS audio
+      let ok2 = await playGoogleTTS(TEXT, ()=>{});
+      if (ok2) { log("Spoke via Google TTS"); return; }
+
+      // 4) If still not spoken, schedule a retry attempt (some browsers allow after a short delay)
+      setTimeout(async ()=>{
+        if (spoken) return;
+        log("Retrying speechSynthesis after delay...");
+        const ok3 = await speakViaSpeechSynthesis(TEXT);
+        if (ok3) return;
+        // last attempt fallback:
+        await playGoogleTTS(TEXT);
+      }, 900);
+    }
+
+    // If any user interaction happens, try again immediately (no visible UI)
+    function onFirstUserGesture(e) {
+      if (spoken) return;
+      log("User gesture detected:", e.type);
+      // try resume AudioContext if exists
+      if (audioCtx && typeof audioCtx.resume === 'function') {
+        audioCtx.resume().then(()=> log("AudioContext resumed by gesture")).catch(()=> log("resume blocked"));
+      } else {
+        tryUnlockAudioContext();
+      }
+      // try to speak now
+      attemptAutoPlayOnce();
+      // remove listeners after first gesture
+      removeGestureListeners();
+    }
+    function addGestureListeners() {
+      ['click','touchstart','pointerdown','keydown'].forEach(evt=>{
+        window.addEventListener(evt, onFirstUserGesture, {passive:true, once:true});
+      });
+      log("Gesture listeners added (silent)");
+    }
+    function removeGestureListeners() {
+      ['click','touchstart','pointerdown','keydown'].forEach(evt=>{
+        try { window.removeEventListener(evt, onFirstUserGesture, {passive:true}); } catch(e){}
+      });
+      log("Gesture listeners removed");
+    }
+
+    // Start attempts on load
+    window.addEventListener('DOMContentLoaded', function(){
+      // small delay to let page settle
+      setTimeout(()=> {
+        attemptAutoPlayOnce();
+        // also add gesture listeners as fallback (they won't show UI)
+        addGestureListeners();
+      }, 120);
+    });
+
+    // Safety: ensure only one utterance ends up playing even if multiple attempts trigger
+    // (the code sets `spoken=true` when onend/onended callbacks run)
+
+    // Expose a small debug helper in console:
+    window.__autoTTS = {
+      attempt: attemptAutoPlayOnce,
+      status: ()=>({spoken, triedSynthesis, triedGoogleTTS})
     };
+
+  })();
   </script>
 </body>
 </html>
