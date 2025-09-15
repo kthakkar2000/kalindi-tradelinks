@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="gu">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Kalindi Tradelinks - TV</title>
   <style>
     body {
-      font-family: "Noto Sans Gujarati", Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background: linear-gradient(to right, #f8f9fa, #e9ecef);
       margin: 0;
       padding: 20px;
@@ -68,30 +68,29 @@
   </style>
 </head>
 <body>
-  <h2>કાળિંદી ટ્રેડલિંક્સ પ્રા. લિ.</h2>
-  <h3>તમે જોઈ રહ્યા છો: સેમસંગ ૫૫" સ્માર્ટ ટીવી</h3>
+  <h2>Kalindi Tradelinks Pvt. Ltd.</h2>
+  <h3>You are viewing: Samsung 55" Smart TV</h3>
 
   <img src="KALINDI WEBSITE/IMAGES/A.JPEG.jpg" alt="Samsung TV">
 
   <p>
-    આ છે ૫૫ ઇંચનું 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી, HDR સપોર્ટ સાથે,
-    ડૉલ્બી સાઉન્ડ અને બિલ્ટ-ઇન એપ્સ જેમ કે Netflix અને YouTube સાથે.
+    This is a 55-inch 4K Ultra HD Smart LED TV with HDR support, Dolby sound, and built-in apps like Netflix and YouTube.
   </p>
 
-  <button onclick="speakDescription()">🔊 વર્ણન સાંભળો</button>
+  <button onclick="speakDescription()">🔊 Play Description</button>
 
   <footer>© 2025 Kalindi Tradelinks Pvt. Ltd.</footer>
 
-  <script>
+<script>
     function speakDescription() {
       const msg = new SpeechSynthesisUtterance(
-        "કાળિંદી ટ્રેડલિંક્સ પ્રાઇવેટ લિમિટેડમાં આપનું સ્વાગત છે. તમે સેમસંગ ૫૫ ઇંચ સ્માર્ટ ટીવી જોઈ રહ્યા છો. આ છે ૫૫ ઇંચનું 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી, HDR સપોર્ટ સાથે, ડૉલ્બી સાઉન્ડ અને Netflix, YouTube જેવી એપ્સ સાથે."
+        "Welcome to Kalindi Tradelinks Private Limited. You are looking for Samsung 55 inch Smart TV. This is a 55 inch 4K Ultra HD Smart LED TV with HDR support, Dolby sound, and built-in apps like Netflix and YouTube."
       );
-      msg.lang = "gu-IN"; // Gujarati
-      msg.rate = 1;       
-      msg.pitch = 1;      
+      msg.rate = 1; // Speed
+      msg.pitch = 1; // Tone
       window.speechSynthesis.speak(msg);
     }
   </script>
 </body>
 </html>
+
