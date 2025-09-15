@@ -1,92 +1,262 @@
 <!DOCTYPE html>
 <html lang="gu">
 <head>
-  <meta charset="UTF-8">
-  <title>સેમસંગ સ્માર્ટ ટીવી - કલિંદી ટ્રેડલિંક્સ</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samsung 55" Smart TV — Kalindi Tradelinks</title>
+
+  <!-- model-viewer (for .glb 3D model support). If you don't have a tv.glb, the image fallback will show. -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   <style>
-    body {
-      font-family: "Noto Sans Gujarati", Arial, sans-serif;
-      background: #f4f6f9;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
+    :root{
+      --bg-1: #0f1724; /* deep navy */
+      --bg-2: #102a43; /* muted teal */
+      --card: #ffffff;
+      --accent: #0ea5a9; /* teal accent */
+      --muted: #6b7280;
+      --glass: rgba(255,255,255,0.06);
     }
 
-    h2 {
-      color: #2c3e50;
-      font-size: 28px;
-      margin-bottom: 10px;
+    html,body{height:100%;margin:0;font-family:Inter, "Noto Sans Gujarati", Arial, sans-serif;background:linear-gradient(150deg,var(--bg-1),var(--bg-2));color:#e6eef5; -webkit-font-smoothing:antialiased;}
+    .page {
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+      box-sizing:border-box;
     }
 
-    h3 {
-      color: #16a085;
-      font-size: 22px;
-      margin-bottom: 20px;
+    .card {
+      width:100%;
+      max-width:980px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius:18px;
+      padding:26px;
+      box-shadow: 0 12px 40px rgba(2,6,23,0.6);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.04);
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:22px;
+      align-items:center;
     }
 
-    img {
-      width: 350px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Left content */
+    .info {
+      padding:8px 6px;
+    }
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:6px;
+    }
+    .logo-dot {
+      width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#34d399,#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:#012;box-shadow:0 6px 18px rgba(14,165,169,0.12);
+    }
+    h1 {
+      margin:0;font-size:20px;color:#e6f7f6;
+      letter-spacing:0.2px;
+    }
+    .subtitle {
+      margin:6px 0 18px 0;color:var(--muted);font-size:14px;
     }
 
-    p {
-      font-size: 18px;
-      color: #333;
-      margin: 20px auto;
-      width: 75%;
-      line-height: 1.6;
+    .desc {
+      background: linear-gradient(180deg, rgba(255,255,255,0.018), rgba(255,255,255,0.01));
+      padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);
+      color:#d8eef0;font-size:16px;line-height:1.6;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.01);
     }
 
-    button {
-      background: #16a085;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      font-size: 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
+    .specs {
+      margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;
+    }
+    .spec {
+      background:var(--glass);padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);font-size:14px;color:#cfeef0;
     }
 
-    button:hover {
-      background: #1abc9c;
-      transform: scale(1.05);
+    .controls {
+      margin-top:18px;display:flex;gap:12px;align-items:center;
     }
 
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #555;
+    .btn {
+      background: linear-gradient(180deg,var(--accent),#0891b2);
+      color:#012; border:none; padding:12px 18px; font-weight:600; border-radius:10px; cursor:pointer; font-size:16px;
+      box-shadow: 0 8px 22px rgba(13,148,136,0.16); transition: transform .12s ease, opacity .12s ease;
+    }
+    .btn:active{transform: translateY(1px);}
+    .btn[disabled]{opacity:0.6; cursor:default; transform:none; box-shadow:none;}
+
+    .muted-text { color:var(--muted); font-size:13px; }
+
+    /* Right: 3D / image */
+    .visual {
+      display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;
+    }
+    model-viewer, .fallback-image {
+      width:100%; max-width:420px; height:280px; border-radius:12px; background:linear-gradient(180deg,#02111a,#042028); box-shadow:0 10px 30px rgba(2,8,20,0.6);
+      border:1px solid rgba(255,255,255,0.03); overflow:hidden;
+    }
+    model-viewer { display:block; }
+    .fallback-image { display:flex;align-items:center;justify-content:center; }
+    .fallback-image img { width:100%; height:100%; object-fit:cover; }
+
+    footer{ grid-column:1 / -1; text-align:center; margin-top:6px; color:rgba(230,238,245,0.6); font-size:13px; }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .card{ grid-template-columns: 1fr; padding:18px;}
+      model-viewer, .fallback-image{ height:300px; }
     }
   </style>
 </head>
 <body>
-  <h2>કલિંદી ટ્રેડલિંક્સ પ્રા. લિ.</h2>
-  <h3>તમે જોઈ રહ્યા છો: સેમસંગ ૫૫" સ્માર્ટ ટીવી</h3>
+  <div class="page">
+    <div class="card" role="main" aria-label="Product card - Samsung 55 inch Smart TV">
 
-  <img src="KALINDI WEBSITE/IMAGES/A.JPEG.jpg" alt="સેમસંગ ટીવી">
+      <div class="info">
+        <div class="brand">
+          <div class="logo-dot">KT</div>
+          <div>
+            <h1>Kalindi Tradelinks Pvt. Ltd.</h1>
+            <div class="subtitle">Samsung 55" Smart TV — 4K Ultra HD</div>
+          </div>
+        </div>
 
-  <p>
-    કલિંદી ટ્રેડલિંક્સ પ્રાઇવેટ લિમિટેડમાં આપનું સ્વાગત છે. તમે સેમસંગ ૫૫ ઇંચ સ્માર્ટ ટીવી જોઈ રહ્યા છો.
-    આ છે ૫૫ ઇંચનું 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી. તેમાં HDR સપોર્ટ, ડૉલ્બી સાઉન્ડ,
-    અને Netflix, YouTube જેવી બિલ્ટ-ઇન એપ્લિકેશન્સ છે. આધુનિક ડિઝાઇન અને ઉચ્ચ ગુણવત્તાની
-    પિક્ચર સાથે, તમારો મનોરંજન અનુભવ ઉત્તમ બનાવે છે.
-  </p>
+        <div class="desc" id="desc">
+          આ છે ૫૫ ઇંચનું 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી. તેમાં HDR સપોર્ટ, ડૉલ્બી સાઉન્ડ,
+          અને Netflix, YouTube જેવી બિલ્ટ-ઇન એપ્લિકેશન્સ છે. આધુનિક ડિઝાઇન અને ઉચ્ચ ગુણવત્તાની
+          પિક્ચર સાથે, તમારો મનોરંજન અનુભવ ઉત્તમ બનાવે છે.
+        </div>
 
-  <button onclick="playGujarati()">🔊 અવાજ સાંભળો</button>
+        <div class="specs" aria-hidden="true">
+          <div class="spec">Resolution: 4K UHD</div>
+          <div class="spec">Screen: 55″</div>
+          <div class="spec">Sound: Dolby</div>
+          <div class="spec">Smart TV: Yes</div>
+        </div>
 
-  <footer>© 2025 કલિંદી ટ્રેડલિંક્સ પ્રા. લિ.</footer>
+        <div class="controls">
+          <button id="playBtn" class="btn" type="button" aria-label="Play Gujarati description">🔊 Play Description (Gujarati)</button>
+          <div class="muted-text" id="statusText">Tap the button to hear product description</div>
+        </div>
+      </div>
+
+      <div class="visual" aria-hidden="false">
+        <!-- model-viewer will try to show tv.glb if present. If not, use fallback image. -->
+        <!-- Add tv.glb to same folder to show 3D. -->
+        <model-viewer id="model3d" src="tv.glb" alt="3D model of Samsung TV"
+                      camera-controls auto-rotate environment-image="neutral" exposure="1"
+                      style="background:transparent;" ar ar-scale="auto">
+          <!-- If model-viewer cannot load the 3D model, the inner fallback will show. -->
+          <div class="fallback-image" slot="poster">
+            <img src="KALINDI WEBSITE/IMAGES/A.JPEG.jpg" alt="Samsung TV image fallback">
+          </div>
+        </model-viewer>
+      </div>
+
+      <footer>© 2025 Kalindi Tradelinks Pvt. Ltd. — Scan QR to view product</footer>
+    </div>
+  </div>
 
   <script>
-    function playGujarati() {
-      let text = "કલિંદી ટ્રેડલિંક્સ પ્રાઇવેટ લિમિટેડમાં આપનું સ્વાગત છે. તમે સેમસંગ ૫૫ ઇંચ સ્માર્ટ ટીવી જોઈ રહ્યા છો. આ 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી HDR સપોર્ટ, ડૉલ્બી સાઉન્ડ અને Netflix, YouTube જેવી એપ્લિકેશન્સ સાથે આવે છે.";
-      let msg = new SpeechSynthesisUtterance(text);
-      msg.lang = "gu-IN";  // Gujarati
-      msg.rate = 1;
-      msg.pitch = 1;
-      window.speechSynthesis.speak(msg);
-    }
+    (function(){
+      const playBtn = document.getElementById('playBtn');
+      const statusText = document.getElementById('statusText');
+      const textEl = document.getElementById('desc');
+
+      // Gujarati text (from visible description) — if you change description text, it will use updated text
+      function getSpeechText(){
+        // We prepend the welcome line for brand voice
+        const welcome = "કલિંદી ટ્રેડલિંક્સ પ્રાઇવેટ લિમિટેડમાં આપનું સ્વાગત છે. ";
+        const core = textEl ? textEl.innerText.trim() : "";
+        // Ensure a concise single-sentence speech when possible
+        return welcome + core;
+      }
+
+      // Disable button after first successful play, and ensure only one utterance
+      let spoken = false;
+      function disableButton() {
+        playBtn.disabled = true;
+        playBtn.style.cursor = "default";
+        statusText.textContent = "Description played";
+      }
+
+      // Speak using Web Speech API if available; otherwise attempt Google TTS fallback
+      function speakGujaratiOnce(){
+        if (spoken) return;
+        const text = getSpeechText();
+
+        function playGoogleTTS(){
+          try {
+            const url = "https://translate.google.com/translate_tts?ie=UTF-8&tl=gu&client=tw-ob&q=" + encodeURIComponent(text);
+            const audio = new Audio(url);
+            audio.crossOrigin = "anonymous";
+            audio.play().then(()=> {
+              spoken = true;
+              disableButton();
+            }).catch((err)=>{
+              console.warn("Google TTS play blocked or failed:", err);
+              statusText.textContent = "Unable to play audio in this browser.";
+            });
+          } catch(e){
+            console.error("Google TTS fallback error", e);
+            statusText.textContent = "Audio playback not supported.";
+          }
+        }
+
+        if ('speechSynthesis' in window){
+          try {
+            const utter = new SpeechSynthesisUtterance(text);
+            utter.lang = "gu-IN";
+            utter.rate = 1;
+            utter.pitch = 1;
+            // try to select a Gujarati voice if available
+            const voices = window.speechSynthesis.getVoices();
+            if (voices && voices.length){
+              const gu = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('gu'));
+              if (gu) utter.voice = gu;
+            }
+            utter.onend = function(){
+              spoken = true;
+              disableButton();
+            };
+            utter.onerror = function(e){
+              console.warn("SpeechSynthesis error", e);
+              // fallback to Google TTS
+              playGoogleTTS();
+            };
+            // speak — in most browsers user-initiated click allows this
+            window.speechSynthesis.cancel(); // cancel any previous
+            window.speechSynthesis.speak(utter);
+            statusText.textContent = "Playing description...";
+          } catch(err) {
+            console.warn("SpeechSynthesis threw error:", err);
+            playGoogleTTS();
+          }
+        } else {
+          // No speechSynthesis support — fallback
+          playGoogleTTS();
+        }
+      }
+
+      // Attach click handler
+      playBtn.addEventListener('click', function(){
+        speakGujaratiOnce();
+      });
+
+      // Accessibility: allow Enter key when focused to trigger
+      playBtn.addEventListener('keyup', function(e){
+        if (e.key === 'Enter' || e.key === ' ') speakGujaratiOnce();
+      });
+
+      // Optional: if the model fails to load, ensure fallback image visible (model-viewer handles it)
+      // Helpful console message:
+      console.log("Product page loaded. 3D model file (tv.glb) will show here if present. Use 'samsung-tv.jpg' as fallback image.");
+    })();
   </script>
 </body>
 </html>
