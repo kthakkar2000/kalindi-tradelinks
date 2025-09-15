@@ -1,96 +1,32 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="gu">
 <head>
   <meta charset="UTF-8">
   <title>Kalindi Tradelinks - TV</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e9ecef);
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h2 {
-      color: #2c3e50;
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    h3 {
-      color: #16a085;
-      font-size: 22px;
-      margin-bottom: 20px;
-    }
-
-    img {
-      width: 350px;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    img:hover {
-      transform: scale(1.05);
-    }
-
-    p {
-      font-size: 18px;
-      color: #333;
-      margin: 20px auto;
-      width: 70%;
-      line-height: 1.6;
-    }
-
-    button {
-      background: #16a085;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      font-size: 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    button:hover {
-      background: #1abc9c;
-      transform: scale(1.05);
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #555;
-    }
-  </style>
 </head>
 <body>
-  <h2>Kalindi Tradelinks Pvt. Ltd.</h2>
-  <h3>You are viewing: Samsung 55" Smart TV</h3>
+  <h2>કાળિંદી ટ્રેડલિંક્સ પ્રા. લિ.</h2>
+  <h3>તમે જોઈ રહ્યા છો: સેમસંગ ૫૫" સ્માર્ટ ટીવી</h3>
 
-  <img src="KALINDI WEBSITE/IMAGES/A.JPEG.jpg" alt="Samsung TV">
+  <img src="KALINDI WEBSITE/IMAGES/A.JPEG.jpg" alt="Samsung TV" width="400">
 
   <p>
-    This is a 55-inch 4K Ultra HD Smart LED TV with HDR support, Dolby sound, and built-in apps like Netflix and YouTube.
+    આ છે ૫૫ ઇંચનું 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી, HDR સપોર્ટ સાથે,
+    ડૉલ્બી સાઉન્ડ અને બિલ્ટ-ઇન એપ્સ જેમ કે Netflix અને YouTube સાથે.
   </p>
 
-  <button onclick="speakDescription()">🔊 Play Description</button>
+  <button onclick="playGujarati()">🔊 વર્ણન સાંભળો</button>
 
-  <footer>© 2025 Kalindi Tradelinks Pvt. Ltd.</footer>
-
-<script>
-    function speakDescription() {
-      const msg = new SpeechSynthesisUtterance(
-        "Welcome to Kalindi Tradelinks Private Limited. You are looking for Samsung 55 inch Smart TV. This is a 55 inch 4K Ultra HD Smart LED TV with HDR support, Dolby sound, and built-in apps like Netflix and YouTube."
-      );
-      msg.rate = 1; // Speed
-      msg.pitch = 1; // Tone
-      window.speechSynthesis.speak(msg);
+  <script>
+    function playGujarati() {
+      // Text in Gujarati
+      const text = "કાળિંદી ટ્રેડલિંક્સ પ્રાઇવેટ લિમિટેડમાં આપનું સ્વાગત છે. તમે સેમસંગ ૫૫ ઇંચ સ્માર્ટ ટીવી જોઈ રહ્યા છો. આ છે ૫૫ ઇંચનું 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી, HDR સપોર્ટ સાથે, ડૉલ્બી સાઉન્ડ અને Netflix, YouTube જેવી એપ્સ સાથે.";
+      
+      // Google Translate TTS (Gujarati)
+      const audio = new Audio("https://translate.google.com/translate_tts?ie=UTF-8&tl=gu&client=tw-ob&q=" + encodeURIComponent(text));
+      audio.play();
     }
   </script>
 </body>
 </html>
-
