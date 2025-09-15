@@ -1,136 +1,92 @@
 <!DOCTYPE html>
 <html lang="gu">
 <head>
-  <meta charset="utf-8" />
-  <title>સેમસંગ સ્માર્ટ ટીવી - Kalindi Tradelinks</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>સેમસંગ સ્માર્ટ ટીવી - કલિંદી ટ્રેડલિંક્સ</title>
   <style>
-    body { font-family: "Noto Sans Gujarati", Arial, sans-serif; background:#f4f6f9; margin:0; padding:22px; text-align:center; color:#222; }
-    .card { max-width:760px; margin:14px auto; background:#fff; padding:18px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); }
-    h1{ margin:0 0 6px 0; font-size:20px; color:#163a2b; } 
-    h2{ margin:6px 0 14px 0; color:#16a085; font-size:18px; }
-    img{ width:360px; border-radius:10px; box-shadow:0 6px 16px rgba(0,0,0,0.12); }
-    p{ color:#333; line-height:1.6; font-size:16px; margin:16px auto; max-width:640px; }
-    footer{ font-size:13px; color:#666; margin-top:10px; }
-    /* Invisible full-screen gesture catcher (no visuals) */
-    #gesture-catcher {
-      position: fixed;
-      inset: 0;
-      background: transparent; /* fully invisible */
-      z-index: 9999;
-      touch-action: manipulation;
+    body {
+      font-family: "Noto Sans Gujarati", Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2c3e50;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      color: #16a085;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 350px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+      margin: 20px auto;
+      width: 75%;
+      line-height: 1.6;
+    }
+
+    button {
+      background: #16a085;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #1abc9c;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Kalindi Tradelinks Pvt. Ltd.</h1>
-    <h2>તમારા માટે: સેમસંગ ૫૫" સ્માર્ટ ટીવી</h2>
-    <img src="KALINDI WEBSITE/IMAGES/A.JPEG.jpg" alt="Samsung TV" />
-    <p id="desc">આ છે ૫૫ ઇંચનું 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી. તેમાં HDR સપોર્ટ, ડોલ્બી સાઉન્ડ, અને Netflix, YouTube जैसी બિલ્ટ-ઇન એપ્લિકેશન્સ છે. આધુનિક ડિઝાઇન અને ઉચ્ચ ગુણવત્તાની પિક્ચર સાથે, તમારો મનોરંજન અનુભવ ઉત્તમ બનાવે છે.</p>
-    <footer>© 2025 Kalindi Tradelinks Pvt. Ltd.</footer>
-  </div>
+  <h2>કલિંદી ટ્રેડલિંક્સ પ્રા. લિ.</h2>
+  <h3>તમે જોઈ રહ્યા છો: સેમસંગ ૫૫" સ્માર્ટ ટીવી</h3>
 
-  <!-- Invisible element that captures first tap (no visual change) -->
-  <div id="gesture-catcher" aria-hidden="true"></div>
+  <img src="KALINDI WEBSITE/IMAGES/A.JPEG.jpg" alt="સેમસંગ ટીવી">
+
+  <p>
+    કલિંદી ટ્રેડલિંક્સ પ્રાઇવેટ લિમિટેડમાં આપનું સ્વાગત છે. તમે સેમસંગ ૫૫ ઇંચ સ્માર્ટ ટીવી જોઈ રહ્યા છો.
+    આ છે ૫૫ ઇંચનું 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી. તેમાં HDR સપોર્ટ, ડૉલ્બી સાઉન્ડ,
+    અને Netflix, YouTube જેવી બિલ્ટ-ઇન એપ્લિકેશન્સ છે. આધુનિક ડિઝાઇન અને ઉચ્ચ ગુણવત્તાની
+    પિક્ચર સાથે, તમારો મનોરંજન અનુભવ ઉત્તમ બનાવે છે.
+  </p>
+
+  <button onclick="playGujarati()">🔊 અવાજ સાંભળો</button>
+
+  <footer>© 2025 કલિંદી ટ્રેડલિંક્સ પ્રા. લિ.</footer>
 
   <script>
-  (function(){
-    const TEXT = "કલિંદી ટ્રેડલિંક્સ પ્રાઇવેટ લિમિટેડમાં આપનું સ્વાગત છે. તમે સેમસંગ ૫૫ ઇંચ સ્માર્ટ ટીવી જોઈ રહ્યા છો. આ 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી HDR સપોર્ટ, ડોલ્બી સાઉન્ડ અને Netflix, YouTube જેવી એપ્લિકેશન્સ સાથે આવે છે.";
-    let spoken = false;
-
-    // Try immediate speak (may be blocked)
-    function trySpeakImmediately() {
-      if (spoken) return;
-      if (!('speechSynthesis' in window)) return false;
-      const utter = new SpeechSynthesisUtterance(TEXT);
-      utter.lang = "gu-IN";
-      utter.rate = 1;
-      utter.pitch = 1;
-      utter.onend = () => { spoken = true; removeGestureCatcher(); };
-      utter.onerror = () => { /* blocked or error */ };
-      try {
-        window.speechSynthesis.speak(utter);
-        return true;
-      } catch(e) {
-        return false;
-      }
+    function playGujarati() {
+      let text = "કલિંદી ટ્રેડલિંક્સ પ્રાઇવેટ લિમિટેડમાં આપનું સ્વાગત છે. તમે સેમસંગ ૫૫ ઇંચ સ્માર્ટ ટીવી જોઈ રહ્યા છો. આ 4K અલ્ટ્રા એચડી સ્માર્ટ એલઇડી ટીવી HDR સપોર્ટ, ડૉલ્બી સાઉન્ડ અને Netflix, YouTube જેવી એપ્લિકેશન્સ સાથે આવે છે.";
+      let msg = new SpeechSynthesisUtterance(text);
+      msg.lang = "gu-IN";  // Gujarati
+      msg.rate = 1;
+      msg.pitch = 1;
+      window.speechSynthesis.speak(msg);
     }
-
-    // Fallback: use google tts audio playback
-    function playGoogleTTS(text){
-      if (spoken) return;
-      try {
-        const url = "https://translate.google.com/translate_tts?ie=UTF-8&tl=gu&client=tw-ob&q=" + encodeURIComponent(text);
-        const a = new Audio(url);
-        a.crossOrigin = "anonymous";
-        a.onended = ()=>{ spoken = true; removeGestureCatcher(); };
-        a.onerror = ()=>{ /* failed */ };
-        const p = a.play();
-        if (p && p.catch) p.catch(()=>{ /* play blocked */ });
-      } catch(e){}
-    }
-
-    // Unified speak attempt used on gesture
-    function speakNow() {
-      if (spoken) return;
-      // try speechSynthesis first
-      if ('speechSynthesis' in window) {
-        const utter = new SpeechSynthesisUtterance(TEXT);
-        utter.lang = "gu-IN";
-        utter.rate = 1;
-        utter.pitch = 1;
-        utter.onend = ()=>{ spoken = true; removeGestureCatcher(); };
-        utter.onerror = ()=>{ /* if fails, try Google TTS */ playGoogleTTS(TEXT); };
-        try {
-          window.speechSynthesis.speak(utter);
-          return;
-        } catch(e){
-          // fallback
-          playGoogleTTS(TEXT);
-          return;
-        }
-      } else {
-        playGoogleTTS(TEXT);
-      }
-    }
-
-    // Remove the invisible catcher once done
-    function removeGestureCatcher(){
-      const c = document.getElementById('gesture-catcher');
-      if (c) { c.remove(); }
-    }
-
-    // Add one-time gesture listeners to capture user's first interaction
-    function addGestureHandler(){
-      const catcher = document.getElementById('gesture-catcher');
-      if (!catcher) return;
-      const handler = function(e){
-        // Prevent any accidental default (but not required)
-        e.preventDefault && e.preventDefault();
-        speakNow();
-      };
-      ['click','touchstart','pointerdown'].forEach(ev => {
-        catcher.addEventListener(ev, handler, {passive:false, once:true});
-      });
-    }
-
-    // Start: immediate attempt (may be blocked)
-    window.addEventListener('DOMContentLoaded', ()=>{
-      // tiny delay then try
-      setTimeout(()=> {
-        trySpeakImmediately();
-        addGestureHandler();
-      }, 120);
-    });
-
-    // Extra safety: if speechSynthesis voice list loads after page, try again shortly
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.onvoiceschanged = function(){
-        if (!spoken) { trySpeakImmediately(); }
-      };
-    }
-  })();
   </script>
 </body>
 </html>
